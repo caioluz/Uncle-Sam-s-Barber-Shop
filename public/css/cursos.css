@@ -1,0 +1,17 @@
+@import url(base.css);
+
+.curso-banner-text {
+    padding-right: 50px;
+}
+.curso-banner-button {
+    text-align: center;
+    margin-top: 40px;
+}
+.curso-banner-button .button-link {
+    background-color: #002a46;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.curso-banner-button .button-link:hover {
+    background-color: #426e8b;
+}
