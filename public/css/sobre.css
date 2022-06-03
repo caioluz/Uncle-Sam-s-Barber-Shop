@@ -1,0 +1,36 @@
+.sobre-visao {
+    background-color: #c53c30;
+    max-width: 946px;
+    display: flex;
+    margin-top: 180px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    min-height: 150px;
+    background-position: top;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+}
+.sobre-visao-title {
+    margin-top: -47px;
+}
+.sobre-visao-title h2 {
+    font-size: 100px;
+    line-height: .77;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+}
+.sobre-visao-text {
+    color: #e6e1d8;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.3em;
+    padding: 35px 70px 0px 247px
+}
+.sobre-visao-image {
+    position: absolute;
+    width: 235px;
+    top: 130px;
+    left: 40px;
+}

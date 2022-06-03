@@ -1,6 +1,6 @@
 <div class="site-content-inner">
   <section class="site-content-section">
-    <div class="site-content-section-inner section-two-columns">
+    <div class="site-content-section-inner section-margin-bottom section-two-columns">
       <div class="curso-banner-text">
         <h1>Sobre</h1> 
         <div>
@@ -13,8 +13,17 @@
       </div>
     </div> 
   </section>
-  <section class="site-content-section section-margin section-background-image">
+  <section class="site-content-section section-parallax sobre-visao">
     <div class="site-content-section-inner">
-    </div> 
+      <div class="sobre-visao-title">
+        <h2>Visão.</h2>
+      </div>
+      <div class="sobre-visao-text">
+        <p>Um espaço sagrado para o homem, onde ele pode relaxar, tomar um bom drink, conversar, encontrar amigos, fazer negócios, viver a experiência de um gentleman. Porque nós acreditamos que assim deve ser uma Barbearia.</p>
+      </div>
+      <div class="sobre-visao-image">
+        <img src="<?php echo base_url(); ?>public/images/sobre/visao.png" alt="">
+      </div>
+    </div>
   </section>
 </div>

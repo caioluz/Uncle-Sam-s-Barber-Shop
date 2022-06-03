@@ -120,6 +120,8 @@ p {
     line-height: 1;
     background-color: #818a91;
     font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
     padding: 18px 32px;
     color: #fff;
     fill: #fff;
@@ -128,8 +130,17 @@ p {
     -o-transition: all .3s;
     transition: all .3s;
 }
-.curso-banner-button .button-link:hover {
-    background-color: #83a1b5;
+.button-link.button-link-blue {
+    background-color: #002a46;
+}
+.button-link.button-link-blue:hover {
+    background-color: #426e8b;
+}
+.button-link.button-link-red {
+    background-color: #c73d30;
+}
+.button-link.button-link-red:hover {
+    background-color: #dd6c61;
 }
 #site-header {
     position: relative;
@@ -258,12 +269,20 @@ p {
     margin-bottom: 86px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 78px;
-    padding-left: 78px;
     overflow: hidden;
+}
+.site-content-section-inner {
+    margin-right: 78px;
+    margin-left: 78px;
 }
 .section-margin {
     margin-top: 76px;
+    margin-bottom: 76px;
+}
+.section-margin-top {
+    margin-top: 76px;
+}
+.section-margin-bottom {
     margin-bottom: 76px;
 }
 .section-two-columns {
@@ -271,6 +290,12 @@ p {
 }
 .section-two-columns > div {
     width: 50%;
+}
+.section-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #site-footer {
     display: block;

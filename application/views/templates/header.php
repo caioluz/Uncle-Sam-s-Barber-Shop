@@ -12,7 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="https://fonts.googleapis.com/css2?family=Khand:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
   <title>Uncle Sam's Barber Shop</title>
-  <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/cursos.css">
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>public/favicon.ico">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
 </head>
 <body>
   <div class="wrap">
