@@ -291,6 +291,12 @@ p {
 .section-two-columns > div {
     width: 50%;
 }
+.section-center {
+    max-width: 300px;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .section-parallax {
     background-attachment: fixed;
     background-position: center;
@@ -329,4 +335,57 @@ p {
 }
 .footer-copyright {
     color: #5f5756;
+}
+.form-fields-container label {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.form-fields-container input[type=text],
+.form-fields-container input[type=email],
+.form-fields-container input[type=password] {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    border: 1px solid #d5d5d5;
+    border-top: 1px solid #aaa;
+    width: 100%;
+    padding: 14px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-fields-container .form-group {
+    margin-bottom: 24px;
+}
+.form-fields-container .button-link {
+    width: 100%;
+    border: 0;
+    -webkit-box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
+    -moz-box-shadow: inset 0 -2px rgba(0,0,0,.25);
+    box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
+    margin: auto;
+    display: inline-block;
+    cursor: pointer;
+}
+.form-fields-container .form-group-link {
+    margin-top: 5px;
+}
+.form-fields-container .form-group-link a {
+    color: #0669de;
+}
+.form-fields-container .form-group-link a:hover {
+    color: #426e8b;
+}
+.error-message {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    background-color: rgb(240 13 13 / 8%);
+    border-left-color: rgb(240 13 13 / 50%);
+    border-left-style: solid;
+    border-left-width: 0.25rem;
 }

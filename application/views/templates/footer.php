@@ -1,3 +1,4 @@
+      </div>
     </div>
     <footer id="site-footer">
       <div id="site-footer-inner" class="clr">
