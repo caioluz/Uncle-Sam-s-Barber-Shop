@@ -1,0 +1,118 @@
+#site-header {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  z-index: 100;
+  background-color: rgba(255,255,255,0);
+}
+#site-header-inner {
+  position: relative;
+  height: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+#site-logo {
+  height: 100%;
+}
+#site-logo #site-logo-inner {
+  display: table-cell;
+  vertical-align: middle;
+  height: 74px;
+}
+#site-logo #site-logo-inner a img {
+  width: auto;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  max-height: 65px;
+}
+#site-navigation-wrap {
+  position: relative;
+  margin-left: auto;
+}
+#site-navigation {
+  margin-right: 30px;
+}
+#site-menu-principal,
+#site-menu-principal * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#site-menu-principal {
+  display: inline-flex;
+  margin-left: auto;
+}
+#site-menu-principal .menu-item {
+  position: relative;
+  white-space: normal;
+}
+#site-menu-principal .menu-link {
+  display: block;
+  position: relative;
+  zoom: 1;
+  color: #423a38;
+  background-color: transparent;
+  padding: 0 10px;
+  letter-spacing: 0.6px;
+  font-family: Khand;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+#site-menu-principal .menu-link:hover {
+  color: #c73d30;
+}
+#site-menu-principal .menu-item-highlighted {
+  background-color: #c73d30;
+}
+#site-menu-principal .menu-item-highlighted:hover {
+  background-color: #423a38;
+}
+#site-menu-principal .menu-item-highlighted a, #site-menu-principal .menu-item-highlighted a:hover {
+  color: #fff;
+}
+#site-logo #site-logo-inner, .site-menu-social .site-menu-social-inner {
+  height: 65px;
+}
+#site-login,
+#site-login a {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#site-login .login-icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  transition: color .25s ease-in-out;
+  border-radius: 50%;
+  line-height: 42px;
+  text-align: center;
+}
+#site-login .login-icon i {
+  font-size: 27px;
+  line-height: 46px;
+}
+#site-login .login-text {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-left: 2px;
+  transition: color .25s ease-in-out;
+  font-size: 14px;
+  line-height: 1.1em;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+#site-login .login-text small {
+  display: block;
+  font-size: 0.8em;
+}

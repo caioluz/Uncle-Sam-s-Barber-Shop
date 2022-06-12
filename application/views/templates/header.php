@@ -20,36 +20,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
   <div class="wrap">
     <header id="site-header">
-      <div id="site-header-inner" class="clr container">
-        <div id="site-logo" class="clr">
-          <div id="site-logo-inner" class="clr">
-            <a href="https://seuelias.com/" class="custom-logo-link" rel="home">
+      <div id="site-header-inner" class="container">
+        <div id="site-logo">
+          <div id="site-logo-inner">
+            <a href="<?php echo base_url(); ?>" class="custom-logo-link" rel="home">
               <img src="<?php echo base_url(); ?>public/images/logo.png" width="100" height="100" alt="Uncle Sam's Barbe Shop">
             </a>
-          </div><!-- #site-logo-inner -->
-        </div><!-- #site-logo -->
-        <div class="site-menu-social clr">
-          <div class="site-menu-social-inner clr">
-            <ul>
-              <li>
-                <a href="" aria-label="Twitter" target="_blank">
-                  <span class="fa fa-twitter" aria-hidden="true"></span>
-                </a>
-              </li>
-              <li>
-                <a href="" aria-label="Facebook" target="_blank">
-                  <span class="fa fa-facebook" aria-hidden="true"></span>
-                </a>
-              </li>
-              <li>
-                <a href="" aria-label="Instagram" target="_blank">
-                  <span class="fa fa-instagram" aria-hidden="true"></span>
-                </a>
-              </li>
-            </ul>
           </div>
-        </div>
-        <div id="site-navigation-wrap" class="clr">
+        </div><!-- #site-logo -->
+        <div id="site-navigation-wrap">
           <nav id="site-navigation" class="clr">
             <ul id="site-menu-principal">
               <li class="menu-item">
@@ -73,6 +52,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>
           </nav><!-- #site-navigation -->
         </div><!-- #site-navigation-wrap -->
+        <div id="site-login">
+          <?php if(isset($usuario)) : ?>
+            <a href="<?php echo base_url(); ?>login">
+              <div class="login-icon"><i class="fa fa-user"></i></div>
+              <div class="login-text"><small>Bem vindo(a)</small><?php echo $usuario['nome']; ?></div>
+            </a>
+          <?php else : ?>
+            <a href="<?php echo base_url(); ?>login">
+              <div class="login-icon"><i class="fa fa-user"></i></div>
+              <div class="login-text"><small>Olá, entre</small>Minha conta</div>
+            </a>
+          <?php endif; ?>
+        </div><!-- #site-login -->
       </div>
     </header>
     <div id="site-content">

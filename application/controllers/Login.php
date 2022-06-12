@@ -7,7 +7,7 @@ class Login extends CI_Controller {
   {
     parent::__construct();
     
-    if ($this->session->userdata('usuario_id')) {
+    if ($this->session->userdata('usuario')) {
       redirect('perfil');
     }
     
@@ -40,7 +40,7 @@ class Login extends CI_Controller {
       redirect('login');
     }
 
-    $this->session->set_userdata('usuario_id', $resultado);
+    $this->session->set_userdata('usuario', $resultado);
     redirect('perfil');
   }
 
