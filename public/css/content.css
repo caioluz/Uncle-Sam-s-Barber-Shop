@@ -38,3 +38,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.section-content-flex {
+  display: flex;
+}

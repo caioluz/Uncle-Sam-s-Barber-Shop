@@ -18,6 +18,8 @@ class MY_Loader extends CI_Loader {
         $vars['usuario'] = $CI->session->userdata('usuario');
     }
 
+    $vars['classe'] = $CI->router->fetch_class();
+
     if ($return)
     {
       $content  = $this->view('templates/header', $vars, $return);
