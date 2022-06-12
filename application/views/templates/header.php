@@ -11,9 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Khand:wght@600;900&family=Open+Sans&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Uncle Sam's Barber Shop</title>
   <link rel="shortcut icon" href="<?php echo base_url(); ?>public/favicon.ico">
   <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -45,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="" class="menu-link"><span class="text-wrap">Loja</span></a>
               </li>
               <li class="menu-item menu-item-highlighted">
-                <a href="" class="menu-link"><span class="text-wrap">Agendar</span></a>
+                <a href="<?php echo base_url(); ?>agendamento" class="menu-link"><span class="text-wrap">Agendar</span></a>
               </li>
             </ul>
           </nav><!-- #site-navigation -->
