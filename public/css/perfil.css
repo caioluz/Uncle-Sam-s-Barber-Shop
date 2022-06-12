@@ -1,0 +1,33 @@
+.perfil-container {
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  padding: 10px 16px;
+}
+.perfil-lateral {
+  width: 300px;
+}
+.perfil-lateral-imagem {
+  text-align: center;
+  margin: 20px 0;
+}
+.perfil-lateral-imagem img {
+  border-radius: 50%;
+  height:106px;
+  width:106px;
+}
+.perfil-lateral-dados hr {
+  margin-bottom: 20px;
+}
+.perfil-conteudo {
+  width: 850px;
+  margin-left: 30px;
+  padding: 20px 25px;
+}
+.perfil-conteudo h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.perfil-conteudo .form-switch .form-check-input {
+  width: 45px;
+  height: 21px;
+}

@@ -24,13 +24,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    font-size: inherit;
     font-family: inherit;
-    font-size: 100%;
     font-style: inherit;
     font-weight: inherit;
+    vertical-align: baseline;
 }
 html {
     font-family: sans-serif;
@@ -38,7 +37,6 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-overflow-x: hidden;
     overflow-x: hidden;
-    font-size: 62.5%;
     overflow-y: scroll;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -47,7 +45,7 @@ body {
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -97,7 +95,6 @@ h1 {
     line-height: 1;
 }
 h2 {
-    font-family: Poppins;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.4;
@@ -129,18 +126,21 @@ p {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    border-width: 0;
 }
 .button-link.button-link-blue {
     background-color: #002a46;
 }
 .button-link.button-link-blue:hover {
     background-color: #426e8b;
+    color: #fff;
 }
 .button-link.button-link-red {
     background-color: #c73d30;
 }
 .button-link.button-link-red:hover {
     background-color: #dd6c61;
+    color: #fff;
 }
 .form-fields-container label {
     text-align: left;
