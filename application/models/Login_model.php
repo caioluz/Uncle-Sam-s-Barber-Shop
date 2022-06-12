@@ -15,17 +15,14 @@ class Login_model extends CI_Model
 
     foreach ($query->result() as $row) {
       if (password_verify($password_hash, $row->senha)) {
-        return $row->cod_cliente;
+        return [
+          'cod' => $row->cod_cliente,
+          'nome' => $row->nome,
+        ];
       }
       
       return FALSE;
     }
-  }
-
-  function inserir_cliente($dados)
-  {
-    $this->db->insert('cliente', $dados);
-    return $this->db->insert_id();
   }
 
 }

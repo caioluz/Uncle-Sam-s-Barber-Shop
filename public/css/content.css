@@ -1,0 +1,40 @@
+.site-content-inner {
+  max-width: 1440px;
+  margin-top: 56px;
+  margin-bottom: 86px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+.site-content-section-inner {
+  margin-right: 78px;
+  margin-left: 78px;
+}
+.section-margin {
+  margin-top: 76px;
+  margin-bottom: 76px;
+}
+.section-margin-top {
+  margin-top: 76px;
+}
+.section-margin-bottom {
+  margin-bottom: 76px;
+}
+.section-two-columns {
+  display: flex;
+}
+.section-two-columns > div {
+  width: 50%;
+}
+.section-center {
+  max-width: 300px;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
