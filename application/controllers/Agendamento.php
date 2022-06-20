@@ -26,7 +26,8 @@ class Agendamento extends CI_Controller {
     $this->load->template('agendamento', $dados);
   }
 
-  public function servicos() {
+  public function servicos()
+  {
     $this->load->model('servico_model');
 
     $unidadeId = $this->input->post('unidade');
@@ -35,7 +36,8 @@ class Agendamento extends CI_Controller {
     echo json_encode($servicos);
   }
 
-  public function barbeiros() {
+  public function barbeiros()
+  {
     $this->load->model('barbeiro_model');
 
     $unidadeId = $this->input->post('unidade');
@@ -43,5 +45,36 @@ class Agendamento extends CI_Controller {
     $barbeiros = $this->barbeiro_model->obter($unidadeId, $servicosId);
 
     echo json_encode($barbeiros);
+  }
+
+  public function horas()
+  {
+    $horas = [];
+    $horasRetorno = [];
+    $data = "2020-01-01 09:00:00";
+
+    do
+    {
+      $dataTempo =  strtotime($data);
+      $hora = intval(date('H', $dataTempo));
+      
+      if ($hora != 12) {
+        $horas[] = date('H:i', $dataTempo);
+      }
+      
+      $data = date('Y-m-d H:i:s', strtotime($data. ' + 20 minutes'));
+      $novaHora = intval(date('H', strtotime($data)));
+    } 
+    while ($novaHora < 18);
+
+    foreach ($horas as $hora) 
+    {
+      $retornar = rand(0, 5);
+      if ($retornar <= 1) {
+        $horasRetorno[] = $hora;
+      }
+    }
+
+    echo json_encode($horasRetorno);
   }
 }

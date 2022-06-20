@@ -145,6 +145,10 @@ p {
   background-color: #dd6c61;
   color: #fff;
 }
+.button-link.disabled {
+  pointer-events: none;
+  opacity: .45;
+}
 .form-fields-container label {
   text-align: left;
   font-size: 14px;

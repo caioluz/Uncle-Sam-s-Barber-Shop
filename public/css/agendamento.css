@@ -1,3 +1,14 @@
+.agendamento {
+  background-image: url(../images/agendamento/we-want-you.png);
+  background-size: 48%;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: 11%;
+}
+.agendamento .site-content-inner {
+  margin-bottom: 0;
+  padding-bottom: 86px;
+}
 .agendamento-texto {
   padding-right: 50px;
 }
@@ -22,6 +33,10 @@
 }
 .agendamento-marcacao {
   padding-top: 85px;
+}
+.agendamento-button {
+  text-align: right;
+  margin-top: 15px;
 }
 .accordion-item {
   margin-bottom: 10px;
@@ -73,6 +88,9 @@
   z-index: 0;
   transition-duration: 300ms;
   transition-property: background-color;
+}
+.accordion-button {
+  border-radius: 0 !important;
 }
 .accordion-button .item-icone {
   background: #f1f1f1;
@@ -497,7 +515,7 @@
   font-size: 14px;
   cursor: pointer;
 }
-.agendamento-marcacao #selecao-datahora-horas .item-hora.active {
+.agendamento-marcacao #selecao-datahora-horas .item-hora.item-selected {
   border-color: #c73d30;
   color: #c73d30;
 }

@@ -13,6 +13,10 @@
       <div class="agendamento-marcacao">
         <form id="form-agendamento" method="post" action="<?php echo base_url(); ?>agendamento/salvar">
           <input type="hidden" id="field-unidade" name="unidade" />
+          <input type="hidden" id="field-servicos" name="servicos" />
+          <input type="hidden" id="field-barbeiro" name="barbeiro" />
+          <input type="hidden" id="field-data" name="data" />
+          <input type="hidden" id="field-hora" name="hora" />
           <div class="accordion accordion-flush" id="accordionAgendamento">
             <div id="accordionUnidade" class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -30,7 +34,6 @@
                     <?php foreach ($unidades as $unidade) : ?>
                       <li>
                         <a href="#" class="item-link" data-id="<?php echo $unidade->cod_unidade; ?>" data-name="<?php echo $unidade->descricao; ?>">
-                          <input class="hide" type="radio" name="unidade" value="<?php echo $unidade->cod_unidade; ?>">
                           <div class="item-inner">
                             <div class="item-title">
                               <div class="item-name">
@@ -60,24 +63,7 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionAgendamento">
                 <div class="accordion-body selecao-servico">
-                  <ul>
-                    <?php foreach ($servicos as $servico) : ?>
-                      <li>
-                        <label class="item-link <?php echo ($servico == 'b') ? 'item-checked' : ''; ?>" data-price="60">
-                          <input type="checkbox" class="hide" name="servicos" value="59">
-                          <div class="item-inner">
-                            <div class="item-title"><?php echo $servico->nome; ?></div>
-                            <div>
-                              <div class="item-preco">R$60,00</div>
-                              <div class="item-duracao"><?php echo $servico->duracao; ?>min</div>
-                            </div>
-                          </div>
-                          <i class="fa fa-square-o"></i>
-                          <i class="fa fa-check"></i>
-                        </label>
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
+                  <ul></ul>
                   <div class="selecao-servico-footer">
                     <div class="selecao-servico-total">R$ <span>00,00</span></div>
                     <div>
@@ -93,28 +79,21 @@
                   <div class="item-icone"><i class="icon-barber"></i></div>
                   <div class="item-inner">
                     <div class="item-titulo">Barbeiro</div>
+                    <div class="item-footer"></div>
                   </div>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAgendamento">
                 <div class="accordion-body selecao-barbeiro">
                   <ul>
-                    <li class="barbeiro-default">
+                    <li class="barbeiro-default" data-id="0">
                       <div class="item-media">
                         <div class="icon-image">
                           <i class="icon-hairstyle"></i>
                         </div>
                       </div>
                       <div class="item-nome">Sem preferência</div>
-                      <input class="hide" type="radio" id="field-barbeiro" name="barbeiro" value="0">
                     </li>
-                    <?php foreach ($barbeiros as $barbeiro) : ?>
-                      <li>
-                        <div class="item-media"><img src="<?php echo base_url(); ?>public/images/barbeiro/<?php echo $barbeiro->imagem; ?>"></div>
-                        <div class="item-nome"><?php echo $barbeiro->nome; ?></div>
-                        <input type="radio" id="field-barbeiro" class="hide" name="barbeiro" value="405">
-                      </li>
-                    <?php endforeach; ?>
                   </ul>
                 </div>
               </div>
@@ -125,6 +104,10 @@
                   <div class="item-icone"><i class="icon-calendar"></i></div>
                   <div class="item-inner">
                     <div class="item-titulo">Data e Hora</div>
+                    <div class="item-footer">
+                      <span class="data"></span>
+                      <span class="hora"></span>
+                    </div>
                   </div>
                 </button>
               </h2>
@@ -133,25 +116,19 @@
                   <div id="datepicker"></div>
                   <div id="selecao-datahora-horas">
                     <div class="item-conteudo">
-                      <div class="item-mensagem" style="display: none;">Sem horários disponíveis.</div>
-                      <div class="item-hora" data-id="10:00">10:00</div>
-                      <div class="item-hora active" data-id="10:20">10:20</div>
-                      <div class="item-hora" data-id="14:00">14:00</div>
-                      <div class="item-hora" data-id="15:00">15:00</div>
-                      <div class="item-hora" data-id="17:00">17:00</div>
-                      <div class="item-hora" data-id="18:20">18:20</div>
+                      <div class="item-mensagem">Selecione uma data para visualizar os horários</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="curso-banner-button">
-            <a href="" target="_blank" class="button-link button-link-blue" role="button">
+          <div class="agendamento-button">
+            <button type="submit" class="button-link button-link-blue disabled">
               <span class="button-link-wrapper">
                 <span class="button-link-text" id="bt-agendar">Agendar agora</span>
               </span>
-            </a>
+            </button>
           </div>
         </form>
       </div>
