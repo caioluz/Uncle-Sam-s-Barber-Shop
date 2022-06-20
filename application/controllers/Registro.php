@@ -14,7 +14,7 @@ class Registro extends CI_Controller {
     $this->load->library('form_validation');
     $this->load->library('encryption');
     $this->encryption->initialize(['driver' => 'openssl']);
-    $this->load->model('registro_model');
+    $this->load->model('cliente_model');
   }
 
   function index()
@@ -46,7 +46,7 @@ class Registro extends CI_Controller {
       'senha' => $password_encriptado
     ];
 
-    $usuario_id = $this->registro_model->inserir_cliente($cliente_dados);
+    $usuario_id = $this->cliente_model->inserir($cliente_dados);
       
     if ($usuario_id <= 0) {
       $this->index();

@@ -6,8 +6,8 @@
         <?php
           if ($this->session->flashdata('message')) {
             echo '
-            <div class="error-message">
-                '.$this->session->flashdata("message").'
+            <div class="mensagem mensagem-erro">
+              ' . $this->session->flashdata("message") . '
             </div>
             ';
           }

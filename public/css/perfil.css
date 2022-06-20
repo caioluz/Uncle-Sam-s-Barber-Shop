@@ -18,6 +18,9 @@
 .perfil-lateral-dados hr {
   margin-bottom: 20px;
 }
+.perfil-lateral-dados p {
+  font-size: 0.9rem;
+}
 .perfil-conteudo {
   width: 850px;
   margin-left: 30px;
