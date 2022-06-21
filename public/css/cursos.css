@@ -1,101 +1,101 @@
 
 .cursos h2 {
-    font-family: Poppins;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.4;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 .curso-banner-text {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 .curso-banner-button {
-    text-align: center;
-    margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
 }
 .curso-callout {
-    background-image: url(../images/cursos/curso_callout_2.jpg);
-    min-height: 250px;
-    background-position: top;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 36%);
+  background-image: url(../images/cursos/curso_callout_2.jpg);
+  min-height: 250px;
+  background-position: top;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 36%);
 }
 .curso-callout .site-content-section-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .curso-callout-text {
-    color: #e6e1d8;
-    font-size: 36px;
-    line-height: 1em;
-    text-transform: uppercase;
-    width: 50%;
-    font-weight: 600;
+  color: #e6e1d8;
+  font-size: 36px;
+  line-height: 1em;
+  text-transform: uppercase;
+  width: 50%;
+  font-weight: 600;
 }
 .curso-callout-text span {
-    color: #c53c30;
+  color: #c53c30;
 }
 .curso-infos {
-    display: flex;
+  display: flex;
 }
 .curso-info {
-    width: 280px;
-    height: 260px;
-    background-color: #002a46;
-    color: #e6e1d8;
-    margin: 15px 0px 15px 35px;
-    padding: 30px;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  width: 280px;
+  height: 260px;
+  background-color: #002a46;
+  color: #e6e1d8;
+  margin: 15px 0px 15px 35px;
+  padding: 30px;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 .curso-info-title h3 {
-    color: #fff;
-    font-size: 27px;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 15px;
+  color: #fff;
+  font-size: 27px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .curso-info-divider {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 15px;
-    text-align: center;
-    line-height: 1;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1;
 }
 .curso-info-divider-separator {
-    display: inline-block;
-    border-top-style: solid;
-    border-top-width: 2px;
-    border-top-color: #bab5ad;
-    width: 20px;
+  display: inline-block;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #bab5ad;
+  width: 20px;
 }
 .curso-info-preco h2 {
-    color: #fff;
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -3px;
-    text-align: center;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -3px;
+  text-align: center;
 }
 .curso-info-preco h2 span {
-    font-size: 18px;
+  font-size: 18px;
 }
 .curso-info-2 {
-    margin-top: 220px;
-    background-color: #fff;
-    color: #797979;
-    margin-left: -20px;
+  margin-top: 220px;
+  background-color: #fff;
+  color: #797979;
+  margin-left: -20px;
 }
 .curso-info-2 .button-link {
-    background-color: #002a46;
+  background-color: #002a46;
 }
 .curso-info-2 .curso-info-title h3,
 .curso-info-2 .curso-info-preco h2 {
-    color: #333;
+  color: #333;
 }
 .curso-info-2 .curso-info-divider-separator {
-    border-top-color: #797979;
+  border-top-color: #797979;
 }
 .curso-info-2 .curso-info-note {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }

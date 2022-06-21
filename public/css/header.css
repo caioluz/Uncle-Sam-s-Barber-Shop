@@ -72,6 +72,7 @@
 }
 #site-menu-principal .menu-item-highlighted {
   background-color: #c73d30;
+  margin-left: 10px;
 }
 #site-menu-principal .menu-item-highlighted:hover {
   background-color: #423a38;
@@ -87,6 +88,9 @@
   position: relative;
   display: flex;
   align-items: center;
+}
+#site-login a:hover {
+  color: #c73d30;
 }
 #site-login .login-icon {
   position: relative;

@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khand:wght@600;900&family=Open+Sans&family=Poppins:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/<?php echo $classe; ?>.css">
   <link rel="shortcut icon" href="<?php echo base_url(); ?>public/favicon.ico">

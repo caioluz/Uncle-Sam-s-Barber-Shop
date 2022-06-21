@@ -1,197 +1,212 @@
 *, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 ::selection {
-    color: #fff;
-    background: #333;
-    text-shadow: none;
+  color: #fff;
+  background: #333;
+  text-shadow: none;
 }
 :root {
-    --page-title-display: block;
+  --page-title-display: block;
 }
 .col:after, .clr:after, .group:after, dl:after, .left_float:after, .right_float:after {
-    content: '';
-    display: block;
-    visibility: hidden;
-    clear: both;
-    zoom: 1;
-    height: 0;
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+  height: 0;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  vertical-align: baseline;
 }
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-overflow-x: hidden;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 body {
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    background-color: #e8e5df;
-    margin: 0;
-    color: #423a38;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  background-color: #e8e5df;
+  margin: 0;
+  color: #423a38;
 }
 a {
-    color: #423a38;
-    background-color: transparent;
+  color: #423a38;
+  background-color: transparent;
 }
 a, a:hover, a:focus {
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 a img {
-    border: 0;
+  border: 0;
 }
 img {
-    max-width: 100%;
-    height: auto;
-    border: 0;
-    vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
 }
 ul, ol {
-    margin: 15px 0 15px 20px;
+  margin: 15px 0 15px 20px;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
+  display: block;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Khand;
-    font-weight: 600;
-    margin: 0 0 20px;
-    color: #333;
-    box-sizing: border-box;
+  font-family: Khand;
+  font-weight: 600;
+  margin: 0 0 20px;
+  color: #333;
+  box-sizing: border-box;
 }
 h1 {
-    text-transform: uppercase;
-    font-size: 72px;
-    line-height: 1;
+  text-transform: uppercase;
+  font-size: 72px;
+  line-height: 1;
 }
 h2 {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.4;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 p {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
+}
+.hide {
+  display: none;
 }
 .container {
-    width: 1200px;
-    max-width: 90%;
-    margin: 0 auto;
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 .container, .container-fluid {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .button-link {
-    width: auto;
-    display: inline-block;
-    line-height: 1;
-    background-color: #818a91;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 18px 32px;
-    color: #fff;
-    fill: #fff;
-    text-align: center;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    border-width: 0;
+  width: auto;
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 18px 32px;
+  color: #fff;
+  fill: #fff;
+  text-align: center;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  border-width: 0;
 }
 .button-link.button-link-blue {
-    background-color: #002a46;
+  background-color: #002a46;
 }
 .button-link.button-link-blue:hover {
-    background-color: #426e8b;
-    color: #fff;
+  background-color: #426e8b;
+  color: #fff;
 }
 .button-link.button-link-red {
-    background-color: #c73d30;
+  background-color: #c73d30;
 }
 .button-link.button-link-red:hover {
-    background-color: #dd6c61;
-    color: #fff;
+  background-color: #dd6c61;
+  color: #fff;
+}
+.button-link.disabled {
+  pointer-events: none;
+  opacity: .45;
 }
 .form-fields-container label {
-    text-align: left;
-    font-size: 14px;
-    margin-bottom: 8px;
-    display: inline-block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: inline-block;
 }
 .form-fields-container input[type=text],
 .form-fields-container input[type=email],
 .form-fields-container input[type=password] {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    border: 1px solid #d5d5d5;
-    border-top: 1px solid #aaa;
-    width: 100%;
-    padding: 14px 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  border: 1px solid #d5d5d5;
+  border-top: 1px solid #aaa;
+  width: 100%;
+  padding: 14px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .form-fields-container .form-group {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 .form-fields-container .button-link {
-    width: 100%;
-    border: 0;
-    -webkit-box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
-    -moz-box-shadow: inset 0 -2px rgba(0,0,0,.25);
-    box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
-    margin: auto;
-    display: inline-block;
-    cursor: pointer;
+  width: 100%;
+  border: 0;
+  -webkit-box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
+  -moz-box-shadow: inset 0 -2px rgba(0,0,0,.25);
+  box-shadow: inset 0 -2px rgb(0 0 0 / 25%);
+  margin: auto;
+  display: inline-block;
+  cursor: pointer;
 }
 .form-fields-container .form-group-link {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .form-fields-container .form-group-link a {
-    color: #0669de;
+  color: #0669de;
 }
 .form-fields-container .form-group-link a:hover {
-    color: #426e8b;
+  color: #426e8b;
 }
-.error-message {
-    padding: 1.25rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    background-color: rgb(240 13 13 / 8%);
-    border-left-color: rgb(240 13 13 / 50%);
-    border-left-style: solid;
-    border-left-width: 0.25rem;
+.mensagem {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #ffc10713;
+  border-left-color: #ffc10780;
+  border-left-style: solid;
+  border-left-width: 0.25rem;
+}
+.mensagem-erro {
+  background-color: #f00d0d14;
+  border-left-color: #f00d0d80;
+}
+.mensagem-sucesso {
+  background-color: #0dcaf013;
+  border-left-color: #0dcaf080;
 }
