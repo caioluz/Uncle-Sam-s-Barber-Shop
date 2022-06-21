@@ -347,11 +347,11 @@
 .accordion-body .selecao-servico-footer .selecao-servico-total {
   font-weight: 600;
 }
-.agendamento-marcacao .selecao-barbeiro ul {
+.accordion-body.selecao-barbeiro ul {
   display: flex;
   flex-wrap: wrap;
 }
-.agendamento-marcacao .selecao-barbeiro li {
+.accordion-body.selecao-barbeiro li {
   border-radius: 8px;
   max-width: 25%;
   min-width: 25%;
@@ -361,7 +361,7 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-.agendamento-marcacao .selecao-barbeiro .item-media {
+.accordion-body.selecao-barbeiro .item-media {
   display: grid;
   min-width: 40px;
   min-height: 40px;
@@ -374,7 +374,7 @@
   align-items: center;
   box-sizing: border-box;
 }
-.agendamento-marcacao .selecao-barbeiro .item-media.item-selected::before {
+.accordion-body.selecao-barbeiro .item-media.item-selected::before {
   content: '';
   display: block;
   width: 100%;
@@ -386,7 +386,7 @@
   background-size: 30px 30px;
   background-color: rgba(79,210,98,.8);
 }
-.agendamento-marcacao .selecao-barbeiro .icon-image {
+.accordion-body.selecao-barbeiro .icon-image {
   width: 100%;
   text-align: center;
   background: #c73d30AA;
@@ -398,87 +398,87 @@
   justify-content: center;
   align-items: center;
 }
-.agendamento-marcacao .selecao-barbeiro .icon-image i {
+.accordion-body.selecao-barbeiro .icon-image i {
   width: auto;
   font-size: 54px;
   color: #fff;
 }
-.agendamento-marcacao .selecao-barbeiro .item-media img {
+.accordion-body.selecao-barbeiro .item-media img {
   border-radius: 100%;
 }
-.agendamento-marcacao .selecao-barbeiro .item-nome {
+.accordion-body.selecao-barbeiro .item-nome {
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidde
   text-overflow: ellipsis;
-  font-family: khand;
+  font-family: khand
   text-align: center;
   color: #4d4341;
   margin-top: 2px;
   font-size: 14px;
 }
-.agendamento-marcacao .selecao-datahora #datepicker {
+.accordion-body.selecao-datahora #datepicker {
   padding-top: 15px;
   background-color: #f7f7f8;
 }
-.agendamento-marcacao .selecao-datahora .datepicker-inline,
-.agendamento-marcacao .selecao-datahora .datepicker .table-condensed {
+.accordion-body.selecao-datahora .datepicker-inline,
+.accordion-body.selecao-datahora .datepicker .table-condensed {
   width: 100%;
 }
-.agendamento-marcacao .selecao-datahora .datepicker thead {
+.accordion-body.selecao-datahora .datepicker thead {
   background: #f7f7f8;
   color: #8c8482;
   font-family: Khand;
   font-weight: 700;
   font-size: 1.1rem;
 }
-.agendamento-marcacao .selecao-datahora .datepicker table tr th,
-.agendamento-marcacao .selecao-datahora .datepicker table tr td {
+.accordion-body.selecao-datahora .datepicker table tr th,
+.accordion-body.selecao-datahora .datepicker table tr td {
   border-radius: 0px;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .prev,
-.agendamento-marcacao .selecao-datahora .datepicker .next {
+.accordion-body.selecao-datahora .datepicker .prev,
+.accordion-body.selecao-datahora .datepicker .next {
   color: #c73d30;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .prev.disabled,
-.agendamento-marcacao .selecao-datahora .datepicker .next.disabled {
+.accordion-body.selecao-datahora .datepicker .prev.disabled,
+.accordion-body.selecao-datahora .datepicker .next.disabled {
   visibility: visible;
   opacity: 0;
   pointer-events: none;
 }
-.agendamento-marcacao .selecao-datahora .datepicker-switch {
+.accordion-body.selecao-datahora .datepicker-switch {
   background-color: transparent;
   cursor: text;
   user-select: text;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .day {
+.accordion-body.selecao-datahora .datepicker .day {
   color: #4d4341;
   background-color: #fff;
   height: 35px;
   vertical-align: middle;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .day.today {
+.accordion-body.selecao-datahora .datepicker .day.today {
   background: #f7f7f7;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .day.disabled {
+.accordion-body.selecao-datahora .datepicker .day.disabled {
   color: #d4d4d4;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .day:hover {
+.accordion-body.selecao-datahora .datepicker .day:hover {
   background: #f4f2ef;
 }
-.agendamento-marcacao .selecao-datahora .datepicker .day.active {
+.accordion-body.selecao-datahora .datepicker .day.active {
   background-color: #c73d3055;
   color: #c73d30;
   text-shadow: none;
   font-weight: bold;
 }
-.agendamento-marcacao #selecao-datahora-horas {
+#selecao-datahora-horas {
   padding: 0;
   background: 0 0;
   display: block;
   position: relative;
   overflow: hidden;
 }
-.agendamento-marcacao #selecao-datahora-horas .item-conteudo {
+#selecao-datahora-horas .item-conteudo {
   padding: 15px;
   overflow: auto;
   padding-top: 12px;
@@ -489,7 +489,7 @@
   min-height: 52px;
   background: #efefef;
 }
-.agendamento-marcacao #selecao-datahora-horas .item-mensagem {
+#selecao-datahora-horas .item-mensagem {
   font-size: 12px;
   padding: 14px 0;
   padding-left: 5px;
@@ -503,7 +503,7 @@
   z-index: 1;
   transform: translate3d(0, 0, 0);
 }
-.agendamento-marcacao #selecao-datahora-horas .item-hora {
+#selecao-datahora-horas .item-hora {
   display: inline;
   background: #fff;
   padding: 8.5px 14px;
@@ -515,7 +515,10 @@
   font-size: 14px;
   cursor: pointer;
 }
-.agendamento-marcacao #selecao-datahora-horas .item-hora.item-selected {
+#selecao-datahora-horas .item-hora.item-selected {
   border-color: #c73d30;
   color: #c73d30;
+}
+#selecao-datahora-horas .item-conteudo.has-hora .item-mensagem {
+  display: none;
 }
