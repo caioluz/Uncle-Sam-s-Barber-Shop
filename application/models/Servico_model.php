@@ -1,6 +1,12 @@
 <?php
 class Servico_model extends CI_Model
 {
+  function obter_todos()
+  {
+    $query = $this->db->get('servico');
+    return $query->result();
+  }
+
   function obter($unidadeId, $servicoId = NULL)
   {
     $this->db->select('s.*, us.valor');

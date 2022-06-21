@@ -19,7 +19,7 @@
         </a>
       </div>
     </div>
-    <div>
+    <div class="curso-imagem">
       <img src="<?php echo base_url(); ?>public/images/cursos/curso_banner.jpeg" alt="">
     </div>
   </div> 

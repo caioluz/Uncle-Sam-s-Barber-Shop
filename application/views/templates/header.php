@@ -35,16 +35,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?php echo base_url(); ?>sobre" class="menu-link"><span class="text-wrap">Sobre</span></a>
               </li>
               <li class="menu-item">
-                <a href="" class="menu-link"><span class="text-wrap">Serviços</span></a>
+                <a href="<?php echo base_url(); ?>servicos" class="menu-link"><span class="text-wrap">Serviços</span></a>
               </li>
               <li class="menu-item">
-                <a href="#" class="menu-link"><span class="text-wrap">Unidades</span></a>
+                <a href="<?php echo base_url(); ?>unidades" class="menu-link"><span class="text-wrap">Unidades</span></a>
               </li>
               <li class="menu-item">
                 <a href="<?php echo base_url(); ?>cursos" class="menu-link"><span class="text-wrap">Cursos</span></a>
-              </li>
-              <li class="menu-item">
-                <a href="" class="menu-link"><span class="text-wrap">Loja</span></a>
               </li>
               <li class="menu-item menu-item-highlighted">
                 <a href="<?php echo base_url(); ?>agendamento" class="menu-link"><span class="text-wrap">Agendar</span></a>

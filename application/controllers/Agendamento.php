@@ -59,7 +59,7 @@ class Agendamento extends CI_Controller {
 
     if ($agendou != -1) {
       $this->session->set_flashdata('message', 'Agendado com sucesso!');
-      redirect('perfil');
+      redirect('perfil/agendamentos');
     }
 
     $this->session->set_flashdata('message', 'Ocorreu algum erro ao agendar os serviços.');

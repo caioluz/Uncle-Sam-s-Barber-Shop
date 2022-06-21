@@ -1,0 +1,28 @@
+.servico-lista {
+  margin: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.servico-item {
+  width: 33.333%;
+}
+.servico-item-inner {
+  background-color: #423a38;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 15px;
+  padding: 25px 25px 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.servico-imagem {
+  margin-bottom: 20px;
+}
+.servico-titulo {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: .77;
+}
+.servico-duracao {
+  margin-bottom: 0;
+}
