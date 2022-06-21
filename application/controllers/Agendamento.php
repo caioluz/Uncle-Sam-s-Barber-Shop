@@ -6,6 +6,11 @@ class Agendamento extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
+    $this->usuario = $this->session->userdata('usuario');
+    
+    if (empty($this->usuario)) {
+      redirect('login/index/agendamento');
+    }
 
     $this->load->database();
   }
@@ -17,13 +22,48 @@ class Agendamento extends CI_Controller {
   public function index()
   {
     $this->load->model('unidade_model');
-    $this->load->model('servico_model');
-    $this->load->model('barbeiro_model');
 
     $dados['unidades'] = $this->unidade_model->obter();
-    $dados['servicos'] = $this->servico_model->obter(1);
-    $dados['barbeiros'] = $this->barbeiro_model->obter(1, [1, 2]);
     $this->load->template('agendamento', $dados);
+  }
+
+  public function salvar()
+  {
+    $this->load->model('agendamento_model');
+    $this->load->model('servico_model');
+
+    $dados = [];
+    $usuario = $this->session->userdata('usuario');
+    $unidadeId = $this->input->post('unidade');
+    $barbeiroId = $this->input->post('barbeiro');
+    $servicosId = $this->input->post('servicos');
+    $data = $this->input->post('data');
+    $hora = $this->input->post('hora');
+    $datetime = new DateTime("$data $hora");
+    $arrServicosId = explode(",", $servicosId);
+
+    foreach ($arrServicosId as $servicoId)
+    {
+      $servico = $this->servico_model->obter($unidadeId, $servicoId)[0];
+      $dados[] = [
+        'cod_cliente' => $usuario['cod'],
+        'cod_barbeiro' => $barbeiroId,
+        'cod_servico' => $servicoId,
+        'data_hora' => $datetime->format('Y-m-d H:i')
+      ];
+
+      $datetime->add(new DateInterval("PT" . $servico->duracao . "M"));
+    }
+
+    $agendou = $this->agendamento_model->inserir($dados);
+
+    if ($agendou != -1) {
+      $this->session->set_flashdata('message', 'Agendado com sucesso!');
+      redirect('perfil');
+    }
+
+    $this->session->set_flashdata('message', 'Ocorreu algum erro ao agendar os serviços.');
+    $this->index();
   }
 
   public function servicos()

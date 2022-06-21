@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
+  private $redirect;
+
   public function __construct()
   {
     parent::__construct();
@@ -17,9 +19,10 @@ class Login extends CI_Controller {
     $this->load->model('login_model');
   }
 
-  function index()
+  function index($redirect = '')
   {
-    $this->load->template('login');
+    $dados['redirect'] = $redirect;
+    $this->load->template('login', $dados);
   }
 
   function validacao()
@@ -40,8 +43,9 @@ class Login extends CI_Controller {
       redirect('login');
     }
 
+    $redirectUrl = $this->input->post('redirect') ?? 'perfil';
     $this->session->set_userdata('usuario', $resultado);
-    redirect('perfil');
+    redirect($redirectUrl);
   }
 
 }

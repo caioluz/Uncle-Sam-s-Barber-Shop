@@ -13,6 +13,7 @@
           }
         ?>
         <form method="post" action="<?php echo base_url(); ?>login/validacao" class="form-fields-container">
+          <input type="hidden" name="redirect" value="<?php echo $redirect; ?>"/>
           <div class="form-group">
             <label>E-mail:</label>
             <input type="email" name="email" class="form-control" value="<?php echo set_value('email'); ?>" required placeholder="Ex. joaodasilva@gmail.com"/>
