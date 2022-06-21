@@ -50,6 +50,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
   <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
+  <script src="<?php echo base_url(); ?>public/js/uteis.js" charset="UTF-8"></script>
   <script src="<?php echo base_url(); ?>public/js/agendamento.js" charset="UTF-8"></script>
 </body>
 </html>

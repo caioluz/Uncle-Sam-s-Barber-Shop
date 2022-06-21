@@ -81,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item accordion-item-disabled">
+          <div id="accordionBarbeiro" class="accordion-item accordion-item-disabled">
             <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <div class="item-icone"><i class="icon-barber"></i></div>
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item accordion-item-disabled">
+          <div id="accordionDataHora" class="accordion-item accordion-item-disabled">
             <h2 class="accordion-header" id="headingFour">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <div class="item-icone"><i class="icon-calendar"></i></div>

@@ -1,25 +1,5 @@
 $(function() {
 
-  function formatDate(date) {
-    var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-
-    if (month.length < 2)
-        month = '0' + month;
-    if (day.length < 2)
-        day = '0' + day;
-
-    return [year, month, day].join('-');
-  }
-
-  function reformatDate(dateStr)
-  {
-    dArr = dateStr.split("-");
-    return dArr[2]+ "/" +dArr[1]+ "/" +dArr[0];
-  }
-
   function _init() {
     $('#datepicker').datepicker({
       startDate: new Date(),
@@ -47,12 +27,12 @@ $(function() {
           console.log('ERRO: não foi poss[ivel buscar os serviços da unidade');
         },
         success: function(data) {
-          let $horasLista = $('#selecao-datahora-horas .item-conteudo');
-          $horasLista.empty();
+          _resetHora();
 
           $.each(eval(data), function(i, item) {
             let elemento = `<div class="item-hora" data-id="${item}">${item}</div>`;
-            $horasLista.append(elemento);
+            $('#selecao-datahora-horas .item-conteudo').addClass('has-hora').append(elemento);
+
           });
         }
       });
@@ -71,13 +51,15 @@ $(function() {
       let $accordionItem = $(this).closest('.accordion-item');
       let $accordionProximo = $accordionItem.next();
 
+      _resetServico();
+      _resetBarbeiro();
+      _resetData();
+
       $('#field-unidade').val(unidadeId);
 
       $accordionItem.addClass('completed');
       $accordionItem.find('.accordion-collapse').collapse('hide');
       $accordionItem.find('.accordion-button .item-footer span').text(unidadeNome);
-      $accordionProximo.find('.selecao-servico-total span').text('0,00');
-      $accordionProximo.removeClass('completed');
 
       $.ajax({
         url: base_url + 'agendamento/servicos',
@@ -87,9 +69,6 @@ $(function() {
           console.log('ERRO: não foi possivel buscar os serviços da unidade');
         },
         success: function(data) {
-          let $servicosLista = $accordionProximo.find('.selecao-servico ul');
-          $servicosLista.empty();
-
           $.each(eval(data), function(i, item) {
             let elemento = `<li>
                 <label class="item-link" data-id="${item.cod_servico}" data-preco="${item.valor}">
@@ -106,9 +85,10 @@ $(function() {
               </li>`;
 
             $accordionProximo.find('.selecao-servico ul').append(elemento);
-            $accordionProximo.removeClass('accordion-item-disabled');
-            $accordionProximo.find('.accordion-collapse').collapse('show');
           });
+
+          $accordionProximo.removeClass('accordion-item-disabled');
+          $accordionProximo.find('.accordion-collapse').collapse('show');
         }
       });
 
@@ -137,6 +117,9 @@ $(function() {
       let servicoNomes = [];
       let unidadeId = $('#field-unidade').val();
 
+      _resetBarbeiro();
+      _resetData();
+
       $accordionItem.find('.item-link.item-checked').each(function() {
         servicosIds.push($(this).attr('data-id'));
         servicoNomes.push($(this).find('.item-title').text());
@@ -157,8 +140,8 @@ $(function() {
         },
         success: function(data) {
           let $accordionProximo = $accordionItem.next();
-          let $barbeirosLista = $accordionProximo.find('.selecao-barbeiro ul');
-          $barbeirosLista.find('li:not(.barbeiro-default)').remove();
+
+          _limparBarbeiros($accordionProximo);
 
           $.each(eval(data), function(i, item) {
             let elemento = `<li data-id="${item.cod_barbeiro}">
@@ -166,10 +149,11 @@ $(function() {
                 <div class="item-nome">${item.nome}</div>
               </li>`;
 
-            $barbeirosLista.append(elemento);
-            $accordionProximo.removeClass('accordion-item-disabled');
-            $accordionProximo.find('.accordion-collapse').collapse('show');
+            $accordionProximo.find('.selecao-barbeiro ul').append(elemento);
           });
+
+          $accordionProximo.removeClass('accordion-item-disabled');
+          $accordionProximo.find('.accordion-collapse').collapse('show');
         }
       });
 
@@ -184,13 +168,16 @@ $(function() {
       let $accordionItem = $(this).closest('.accordion-item');
       let $accordionProximo = $accordionItem.next();
 
+      _resetData();
+
       $('#field-barbeiro').val(barbeiroId);
 
       $accordionItem.find('.item-media').removeClass('item-selected');
-      $(this).find('.item-media').addClass('item-selected');
       $accordionItem.addClass('completed');
       $accordionItem.find('.accordion-collapse').collapse('hide');
       $accordionItem.find('.accordion-button .item-footer').text(barbeiroNome);
+
+      $(this).find('.item-media').addClass('item-selected');
 
       $accordionProximo.removeClass('completed');
       $accordionProximo.removeClass('accordion-item-disabled');
@@ -209,8 +196,9 @@ $(function() {
 
       $('#field-hora').val(horaId);
 
-      $horasContainer.find('li').removeClass('item-selected');
+      $horasContainer.find('div').removeClass('item-selected');
       $(this).addClass('item-selected');
+      
       $accordionItem.addClass('completed');
       $accordionItem.find('.accordion-collapse').collapse('hide');
       $accordionItem.find('.accordion-button .item-footer .data').text(reformatDate(data));
@@ -220,6 +208,54 @@ $(function() {
 
       event.preventDefault();
     });
+  }
+
+  function _limparServicos($accordion) {
+    $accordion.find('.selecao-servico ul').empty();
+  }
+
+  function _limparBarbeiros($accordion) {
+    $accordion.find('.selecao-barbeiro ul li:not(.barbeiro-default)').remove();
+  }
+
+  function _limparHoras() {
+    $('#selecao-datahora-horas .item-conteudo').removeClass('has-hora').find('div:not(.item-mensagem)').remove();
+  }
+
+  function _resetServico() {
+    let $accordion = $('#accordionServico');
+    $accordion.find('.selecao-servico-total span').text('0,00');
+    $accordion.removeClass('completed').addClass('accordion-item-disabled');
+    _limparServicos($accordion);
+
+    $('#field-servicos').val('');
+    $('.agendamento-button button').addClass('disabled');
+  }
+
+  function _resetBarbeiro() {
+    let $accordion = $('#accordionBarbeiro');
+    $accordion.removeClass('completed').addClass('accordion-item-disabled');
+    _limparBarbeiros($accordion);
+
+    $('#field-barbeiro').val('');
+    $('.agendamento-button button').addClass('disabled');
+  }
+
+  function _resetData() {
+    let $accordion = $('#accordionDataHora');
+    $accordion.removeClass('completed').addClass('accordion-item-disabled');
+
+    $("#datepicker").datepicker('update', "");
+    $('#field-data').val('');
+
+    _resetHora();
+  }
+
+  function _resetHora() {
+    _limparHoras();
+
+    $('#field-hora').val('');
+    $('.agendamento-button button').addClass('disabled');
   }
 
   _init();
