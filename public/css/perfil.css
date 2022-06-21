@@ -1,7 +1,7 @@
 .perfil-container {
   background-color: #fff;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-  padding: 10px 16px;
+  padding: 10px 16px 25px;
 }
 .perfil-lateral {
   width: 300px;
@@ -21,8 +21,21 @@
 .perfil-lateral-dados p {
   font-size: 0.9rem;
 }
+.perfil-lateral-dados a.menu-link {
+  display: block;
+  color: #c73d30;
+}
+.perfil-lateral-dados a.menu-link:hover {
+  color: #dd6c61;
+}
+.perfil-lateral-dados a.menu-link:before {
+  content: '\f0c1';
+  font-family: 'FontAwesome';
+  margin-right: 10px;
+}
 .perfil-conteudo {
   width: 850px;
+  min-height: 450px;
   margin-left: 30px;
   padding: 20px 25px;
 }
@@ -33,4 +46,24 @@
 .perfil-conteudo .form-switch .form-check-input {
   width: 45px;
   height: 21px;
+}
+.perfil-conteudo .table.table-row-dashed tr {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #EAEAEA;
+}
+.perfil-conteudo .rounded-2 {
+  width: 4px;
+}
+.perfil-conteudo .bg-agendado,
+.perfil-conteudo .badge-agendado {
+  background-color: #426e8b !important;
+}
+.perfil-conteudo .bg-concluido,
+.perfil-conteudo .badge-concluido {
+  background-color: #82dd61 !important;
+}
+.perfil-conteudo .bg-cancelado,
+.perfil-conteudo .badge-cancelado {
+  background-color: #dd6c61 !important;
 }

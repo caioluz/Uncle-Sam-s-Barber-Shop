@@ -12,6 +12,9 @@
   text-align: center;
   margin-top: 40px;
 }
+.curso-imagem {
+  padding-top: 88px;
+}
 .curso-callout {
   background-image: url(../images/cursos/curso_callout_2.jpg);
   min-height: 250px;
@@ -38,6 +41,7 @@
 }
 .curso-infos {
   display: flex;
+  padding-top: 25px;
 }
 .curso-info {
   width: 280px;

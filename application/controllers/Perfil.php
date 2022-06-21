@@ -24,6 +24,14 @@ class Perfil extends CI_Controller {
     $this->load->template('perfil', $dados);
   }
 
+  function agendamentos()
+  {
+    $this->load->model('agendamento_model');
+    $dados['form'] = $this->cliente_model->obter($this->usuario['cod']);
+    $dados['agendamento'] = $this->agendamento_model->obter($this->usuario['cod']);
+    $this->load->template('perfil', $dados);
+  }
+
   function salvar()
   {
     $this->load->helper('form');
