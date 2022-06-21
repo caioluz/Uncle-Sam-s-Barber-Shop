@@ -3,8 +3,7 @@
     <div class="servico-texto">
       <h1>Serviços</h1>
       <div>
-        <p>Os homens estão cada vez mais preocupados com estética e que mal há nisso? E não é só cabelo não, a procura por serviços personalizados para barba e bigode está maior. Por isso, a Barbearia Seu Elias investe nos melhores profissionais para te oferecer atendimento e serviço de alta qualidade.
-        <p>
+        <p>Os homens estão cada vez mais preocupados com estética e que mal há nisso? E não é só cabelo não, a procura por serviços personalizados para barba e bigode está maior. Por isso, a Barbearia Seu Elias investe nos melhores profissionais para te oferecer atendimento e serviço de alta qualidade.</p>
       </div>
     </div>
     <div class="servico-lista">
